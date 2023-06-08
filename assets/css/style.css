@@ -1,15 +1,28 @@
 body {
-    background: rgb(246, 245, 247);
+    background-color: rgb(246, 245, 247);
 }
 
-
 table {
-    /*border-collapse: collapse;*/
+    border-collapse: collapse;
     width: 100%;
+    background-color: beige;
+}
+
+thead {
+    background-color: rgb(199, 199, 28);
 }
 
 th,
 td {
     border: 1px solid black;
     padding: 8px;
+}
+
+button {
+    padding: 8px;
+    background-color: beige;
+}
+
+.textInBlue {
+    text-decoration-color: blue;
 }
