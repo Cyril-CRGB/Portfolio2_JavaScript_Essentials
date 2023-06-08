@@ -1,8 +1,18 @@
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the button element
+    var generateButton = document.getElementById('generateButton');
+
+    // Add click event listener to the button
+    generateButton.addEventListener('click', generateListOfProduct);
+});
+
 /**
  * This function will add Price CHF and Price EUR of all table and update 
  * the table in index.html with the result.
  */
 function generateListOfProduct() {
+    console.log('Button clicked');
     // Get references to the three tables
     var table1 = document.getElementById('table1');
     var table2 = document.getElementById('table2');
@@ -12,7 +22,7 @@ function generateListOfProduct() {
     var newTableBody = document.getElementById('newTableBody');
 
     // Clear any existing rows in the new table
-    newTableBody.innerHTML = '';
+    /*newTableBody.innerHTML = '';*/
 
     // Loop through each row of table1
     for (var i = 1; i < table1.rows.length; i++) {
