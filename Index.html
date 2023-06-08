@@ -10,8 +10,36 @@
 </head>
 
 <body>
+    <h1>Main Page</h1>
+
+    <h2>Navigation</h2>
+    <ul>
+        <li><a href="zone10.html">First Table - Zone 10</a></li>
+        <li><a href="zone200.html">Second Table - Zone 200</a></li>
+        <li><a href="zone210.html">Third Table - Zone 210</a></li>
+    </ul>
+    <h2>List of Products</h2>
+    <button onclick="generateListOfProduct()">Generate list of products</button>
+    <table id="newTable">
+        <thead>
+            <tr>
+                <th>Zone</th>
+                <th>Code_article</th>
+                <th>Nom_article</th>
+                <th>Code_categorie</th>
+                <th>Nom_categorie</th>
+                <th>Classe</th>
+                <th>Prix CHF</th>
+                <th>Prix EURO</th>
+            </tr>
+        </thead>
+        <tbody id="newTableBody"></tbody>
+    </table>
+
+
 
     <script src="assets/js/script.js"></script>
+    assets/js/script.js
 </body>
 
 </html>

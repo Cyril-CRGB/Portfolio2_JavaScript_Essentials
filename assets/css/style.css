@@ -1,9 +1,9 @@
 body {
-    background: rgb(191, 168, 212);
+    background: rgb(214, 210, 218);
 }
 
 table {
-    border-collapse: collapse;
+    /*border-collapse: collapse;*/
     width: 100%;
 }
 
