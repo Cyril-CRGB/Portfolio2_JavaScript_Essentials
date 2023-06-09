@@ -1,6 +1,5 @@
 // Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function (event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {
     // to generate the list of Product
     // Get the button element 
     let generateButton = document.getElementById('generateButton');
@@ -13,6 +12,34 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // Add click event listener to the button
     generateButtonExcel.addEventListener('click', generateExcel);
 
+    //Edit blue colored cells
+    //Get the cells
+    let blueCells = document.getElementsByClassName("textInBlue");
+    //Add click event listener to the cells
+    for (let i = 0; i < blueCells.length; i++) {
+        blueCells[i].addEventListener('click', function () {
+            //Replace the cell content with an input field
+            let testValueCell = blueCells[i].innerHTML;
+            let inputChange = document.createElement('input');
+            inputChange.type = 'text';
+            inputChange.value = this.textContent;
+            this.textContent = '';
+            this.appendChild(inputChange);
+            //Focus the input field
+            inputChange.focus();
+            //Update the cell's content when the user finishes editing
+            inputChange.addEventListener('blur', function () {
+                this.parentNode.textContent = this.value;
+                //Test if value has been modified and give message to update all tables
+                if (testValueCell !== inputChange.value) {
+                    alert('Clic on "Calculate rate" to update all tables!');
+                } else {
+                    return;
+                }
+            });
+
+        });
+    }
 });
 
 /**
@@ -26,13 +53,11 @@ function generateListOfProduct() {
     let table2 = document.getElementsByClassName('table200');
     let table3 = document.getElementsByClassName('table210');
 
-
     // Get the tbody element of the new table
     let newTableBody = document.getElementById('newTableBody');
 
     // Clear any existing rows in the new table
     newTableBody.innerHTML = '';
-
 
     // Loop through each row of table1
     for (let i = 0; i < 6; i++) {
@@ -107,7 +132,6 @@ function generateExcel() {
 
     // Add the worksheet to the workbook
     XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
-
 
     // Save the workbook as an Excel file
     XLSX.writeFile(workbook, "output.xlsx");

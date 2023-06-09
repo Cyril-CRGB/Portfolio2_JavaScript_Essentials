@@ -25,10 +25,22 @@ td {
 
 button {
     padding: 8px;
-    background-color: beige;
     float: left;
     margin-right: 15px;
     margin-bottom: 15px;
+}
+
+input {
+    padding: 8px;
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+label {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    float: right;
 }
 
 .textInBlue {
