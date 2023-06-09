@@ -5,24 +5,46 @@ body {
 table {
     border-collapse: collapse;
     width: 100%;
-    background-color: beige;
+    background-color: rgb(159, 160, 157);
+
 }
 
 thead {
-    background-color: rgb(199, 199, 28);
+    background-color: rgb(66, 66, 65);
+    color: aliceblue;
 }
 
 th,
 td {
     border: 1px solid black;
     padding: 8px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
     padding: 8px;
     background-color: beige;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 .textInBlue {
-    text-decoration-color: blue;
+    color: blue;
+    font-weight: bold;
+}
+
+#newTable {
+    background-color: beige;
+}
+
+#newTable>thead {
+    background-color: rgb(199, 199, 28);
+    color: black;
+}
+
+h1 {
+    text-align: center;
 }
