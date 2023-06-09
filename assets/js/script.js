@@ -40,6 +40,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         });
     }
+    //to recalculate Price CHF or Price EUR depending on the rate given
+    //Get the submit button and rate input
+    let calculateButtonX = document.getElementById('calculateButton');
+    // Add click event listener to the button
+    calculateButtonX.addEventListener('click', calculateRate);
+
 });
 
 /**
@@ -135,4 +141,34 @@ function generateExcel() {
 
     // Save the workbook as an Excel file
     XLSX.writeFile(workbook, "output.xlsx");
+}
+
+/**
+ * This function recalculate black numbers
+ */
+function calculateRate() {
+    //Get the rate input
+    let rateInput = document.getElementById('rate');
+    //Get the value entered in the rate input
+    let rate = parseFloat(rateInput.value);
+    // Get references to the three tables
+    let table1 = document.getElementsByClassName('table10');
+    let table2 = document.getElementsByClassName('table200');
+    let table3 = document.getElementsByClassName('table210');
+    //Update the 8th column (Price EURO) of table1
+    for (let i = 1; i < table1.rows.length; i++) {
+        let priceCHF = parseFloat(table1.rows[i].cells[6].textContent);
+        let priceEuro = Math.ceil(priceCHF / rate * 10) / 10;
+        table1.rows[i].cells[7].textContent = priceEuro.toFixed(2);
+    }
+    //Update the 7th column (Price CHF) of table2 and 3
+    for (let i = 1; i < table2.rows.length; i++) {
+        let priceEuroTable2 = parseFloat(table2.rows[i].cells[7].textContent);
+        let priceChfTable2 = Math.ceil(priceEuroTable2 * rate * 10) / 10;
+        table2.rows[i].cells[6].textContent = priceChfTable2.toFixed(2);
+
+        let priceEuroTable3 = parseFloat(table3.rows[i].cells[7].textContent);
+        let priceChfTable3 = Math.ceil(priceEuroTable3 * rate * 10) / 10;
+        table3.rows[i].cells[6].textContent = priceChfTable3.toFixed(2);
+    }
 }

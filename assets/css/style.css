@@ -30,7 +30,8 @@ button {
     margin-bottom: 15px;
 }
 
-input {
+input,
+#calculateButton {
     padding: 8px;
     float: right;
     margin-left: 15px;
@@ -59,4 +60,12 @@ label {
 
 h1 {
     text-align: center;
+}
+
+@media (max-width: 350px) {
+
+    /*input {
+        float: none;
+    }*/
+
 }
