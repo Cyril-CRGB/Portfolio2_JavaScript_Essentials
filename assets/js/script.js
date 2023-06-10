@@ -149,6 +149,8 @@ function generateExcel() {
 function calculateRate() {
     //Get the rate input
     let rateInput = document.getElementById('rate');
+    //Test if rateInput is empty and give a standard value of 1.13
+    rateInput.value === '' ? rateInput.value = 1.13 : rateInput.value;
     //Get the value entered in the rate input
     let rate = parseFloat(rateInput.value);
     // Get references to the three tables
@@ -156,19 +158,22 @@ function calculateRate() {
     let table2 = document.getElementsByClassName('table200');
     let table3 = document.getElementsByClassName('table210');
     //Update the 8th column (Price EURO) of table1
-    for (let i = 1; i < table1.rows.length; i++) {
-        let priceCHF = parseFloat(table1.rows[i].cells[6].textContent);
+    for (let i = 0; i < 6; i++) {
+        let priceCHF = parseFloat(table1[0].children[i].children[6].innerHTML);
         let priceEuro = Math.ceil(priceCHF / rate * 10) / 10;
-        table1.rows[i].cells[7].textContent = priceEuro.toFixed(2);
+        table1[0].children[i].children[7].innerHTML = priceEuro.toFixed(2);
+        table1[0].children[i].children[7].style.color = 'orange';
     }
     //Update the 7th column (Price CHF) of table2 and 3
-    for (let i = 1; i < table2.rows.length; i++) {
-        let priceEuroTable2 = parseFloat(table2.rows[i].cells[7].textContent);
+    for (let i = 0; i < 6; i++) {
+        let priceEuroTable2 = parseFloat(table2[0].children[i].children[7].innerHTML);
         let priceChfTable2 = Math.ceil(priceEuroTable2 * rate * 10) / 10;
-        table2.rows[i].cells[6].textContent = priceChfTable2.toFixed(2);
+        table2[0].children[i].children[6].innerHTML = priceChfTable2.toFixed(2);
+        table2[0].children[i].children[6].style.color = 'orange';
 
-        let priceEuroTable3 = parseFloat(table3.rows[i].cells[7].textContent);
+        let priceEuroTable3 = parseFloat(table3[0].children[i].children[7].innerHTML);
         let priceChfTable3 = Math.ceil(priceEuroTable3 * rate * 10) / 10;
-        table3.rows[i].cells[6].textContent = priceChfTable3.toFixed(2);
+        table3[0].children[i].children[6].innerHTML = priceChfTable3.toFixed(2);
+        table3[0].children[i].children[6].style.color = 'orange';
     }
 }

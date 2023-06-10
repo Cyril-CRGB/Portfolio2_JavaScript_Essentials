@@ -26,8 +26,11 @@ td {
 button {
     padding: 8px;
     float: left;
-    margin-right: 15px;
     margin-bottom: 15px;
+}
+
+#generateButton {
+    margin-right: 15px;
 }
 
 input,
@@ -36,6 +39,7 @@ input,
     float: right;
     margin-left: 15px;
     margin-bottom: 15px;
+    color: orange;
 }
 
 label {
@@ -62,10 +66,36 @@ h1 {
     text-align: center;
 }
 
-@media (max-width: 350px) {
+h4 {
+    color: blue;
+    font-style: italic;
+    text-align: right;
+}
 
-    /*input {
-        float: none;
-    }*/
+@media (max-width: 480px) {
+    body {
+        font-size: 75%;
+    }
 
+    input,
+    label {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 75%;
+    }
+
+    button {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 75%;
+    }
+
+    #calculateButton {
+        margin-left: 0px;
+        float: left;
+    }
+
+    table {
+        font-size: 40%;
+    }
 }
