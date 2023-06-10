@@ -2,7 +2,7 @@
 
 ## Cross-Border Ski Resort Fare Calculator
 
-<img src="assets/images/Portfolio2_Readme_AmIResponsive.png" alt="ReadmePicture1">
+<img src="assets/images/Portfolio2_Readme_AmIResponsive.jpg" alt="ReadmePicture1">
 
 ## Project description
 
@@ -16,20 +16,20 @@ The data used is only for exemple.
 
 ## Features:
 
-Each Cable car company fare liste is listed as a grey table, here 1 swiss and 2 french, namely A, B, C.<img src="assets/images/Portfolio2_Readme_Feature1.png" alt="ReadmePicture2">
+Each Cable car company fare liste is listed as a grey table, here 1 swiss and 2 french, namely A, B, C.<img src="assets/images/Portfolio2_Readme_Feature1.jpg" alt="ReadmePicture2">
 
-Each article is given in two currencies CHF (Swiss francs) and EURO (euros). Each table is either originaly given in CHF or EURO, and this is indicated by blue color, the other column is calculated. <img src="assets/images/Portfolio2_Readme_Feature2.png" alt="ReadmePicture3">
+Each article is given in two currencies CHF (Swiss francs) and EURO (euros). Each table is either originaly given in CHF or EURO, and this is indicated by blue color, the other column is calculated. <img src="assets/images/Portfolio2_Readme_Feature2.jpg" alt="ReadmePicture3">
 
-Blue colored prices are editable when you click on it. <img src="assets/images/Portfolio2_Readme_Feature3.png" alt="ReadmePicture4">
+Blue colored prices are editable when you click on it. <img src="assets/images/Portfolio2_Readme_Feature3.jpg" alt="ReadmePicture4">
 
-If you change blue prices, the change will be effective if you click somewhere else and an alert pops up and tell the user to click on "Calculate rate" button.<img src="assets/images/Portfolio2_Readme_Feature4.png" alt="ReadmePicture5">
+If you change blue prices, the change will be effective if you click somewhere else and an alert pops up and tell the user to click on "Calculate rate" button.<img src="assets/images/Portfolio2_Readme_Feature4.jpg" alt="ReadmePicture5">
 
 At the top right of the screen there is an input text and a button called "Calculate rate" which allows you to change the rate 1€ = CHF ?
-If you change the rate and click on "Calculate rate" all the black colored price are recalculated and put in orange color. <img src="assets/images/Portfolio2_Readme_Feature5.png" alt="ReadmePicture6">
+If you change the rate and click on "Calculate rate" all the black colored price are recalculated and put in orange color. <img src="assets/images/Portfolio2_Readme_Feature5.jpg" alt="ReadmePicture6">
 
-At the top left, you will find two other buttons. The first "Generate list of Prices" will update the yellow table with a list of all 6 articles with the cumulative prices of table1, table2 and table3 in column Price CHF and Price EURO. The second "Generate Excel list" allows the user to export in excel file the yellow table. <img src="assets/images/Portfolio2_Readme_Feature6.png" alt="ReadmePicture7">
+At the top left, you will find two other buttons. The first "Generate list of Prices" will update the yellow table with a list of all 6 articles with the cumulative prices of table1, table2 and table3 in column Price CHF and Price EURO. The second "Generate Excel list" allows the user to export in excel file the yellow table. <img src="assets/images/Portfolio2_Readme_Feature6.jpg" alt="ReadmePicture7">
 
-If the yellow table does not contain any data, the user will receive an alert that the data is empty.<img src="assets/images/Portfolio2_Readme_Feature7.png" alt="ReadmePicture8">
+If the yellow table does not contain any data, the user will receive an alert that the data is empty.<img src="assets/images/Portfolio2_Readme_Feature7.jpg" alt="ReadmePicture8">
 
 ## Testing:
 
@@ -40,18 +40,18 @@ I do not know if the following are truly bugs, but those are were I struggled th
 - Bug fix 3: I was not able to give relative length to my loops, so I decided to use absolute length. This is something I would like to change if I were to give this website to my friend.
 
 - I tested the HTML code with https://validator.w3.org/#validate_by_input : no error found
-  <img src="assets/images/Portfolio2_Readme_htmlValidator.png" alt="ReadmePicture2">
+  <img src="assets/images/Portfolio2_Readme_htmlValidator.jpg" alt="ReadmePicture2">
 - I tested the CSS code with https://jigsaw.w3.org/css-validator/#validate_by_input : no error found
-  <img src="assets/images/Portfolio2_Readme_cssValidator.png" alt="ReadmePicture3">
+  <img src="assets/images/Portfolio2_Readme_cssValidator.jpg" alt="ReadmePicture3">
 - I tested the Javascript code with https://jshint.com/ : no error found, yet 43 warnings, mainly about the compatibility of 'let' used to define variables as well as 'template literal syntax', loops referencing an outer scoped variable. Also it cannot find a variable 'XLSX' yet it is working!
-  <img src="assets/images/Portfolio2_Readme_jshintValidator.png" alt="ReadmePicture4">
+  <img src="assets/images/Portfolio2_Readme_jshintValidator.jpg" alt="ReadmePicture4">
 - I tested different web browsers Chrome and Edge : working on both
 - I tested different screen sizes, and different devices : the website is responsive
 
 ## The performances of my first project:
 
 I had to use private navigator, it seems like some of the code is not compatible with new generation browsers. I did not add meta description, since it is said that HTML/CSS is not the main topic of this project [see video](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+JSE_PAGPPF+2021_Q2/courseware/30137de05cd847d1a6b6d2c7338c4655/c3bd296fe9d643af86e76e830e1470dd/), which explains the result of 82 for SEO.
-<img src="assets/images/Portfolio2_Readme_LighthousPerformance.png" alt="ReadmePicture5">
+<img src="assets/images/Portfolio2_Readme_LighthousPerformance.jpg" alt="ReadmePicture5">
 
 ## Technologies Used
 
